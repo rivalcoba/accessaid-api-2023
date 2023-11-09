@@ -23,19 +23,21 @@ export async function aiTest(req, res) {
     specialty: specialist,
     consulting_room: medicalOffice,
     date,
+    hour: time,
   } = req.body;
   const completion = await openai.chat.completions.create({
     messages: [
       {
         role: 'system',
         content:
-          'Eres el encargado de la recepción de un consultorio medico muy amigable',
+          'Eres la encargada de la recepción de un consultorio medico que lleva por nombre Accessaid, eres muy amigable',
       },
       {
         role: 'user',
         content: `
-        Con los siguientes datos elabora un mensaje de confirmación de cita medica
-        para una persona:
+        Con los siguientes datos proporcionados por un cliente
+        elabora un mensaje de confirmación de cita medica, el cliente es
+        una persona discapacitada:
         1. CURP: ${curp}
         2. RFC: ${rfc}
         3. Nombre: ${name}
@@ -43,11 +45,17 @@ export async function aiTest(req, res) {
         5. Apellido Materno: ${secLastName}
         6. Epecialista: ${specialist}
         7. Consultorio: ${medicalOffice}
-        Con respecto a la fecha el cliente ha seleccionado un rango,
-        tu deberas elegir una fecha y deberas elegir tambien la hora en la que sera atendido,
-        La hora debera estar entre las 07 y las 20 horas dentro del rango proporcionado por el usuario
-        el cual fue: ${date} del 2023, por ejemplo las 8 am, tu corrige el nombre de la especialidad, por ejemplo
-        si te dice dentista la especialidad es odontologia.
+        8. Rango de la Fecha:${date}
+        9. Rango de la hora: ${time}
+        Contempla los siguientes aspectos para el mensaje:
+        Con respecto a la fecha de la consulta el cliente te ofrecera
+        un rango de días y un rango de horas, tu deber
+        es elegir una fecha y hora dentro del rango proporcionado por 
+        el cliente, por ejemplo: El dia lunes 13 a las 8 am.
+        Con respecto a la especialidad asegura de seleccionar el nombre adecuado
+        de la especialidad, por ejemplo si el cliente en el especialista dice dentista 
+        la especialidad es odontologia, si no reconoces la especialidad mandalo a
+        medicina familiar.
         `,
       },
     ],
