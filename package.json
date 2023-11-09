@@ -5,7 +5,7 @@
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
     "dev": "NODE_ENV=development babel-watch ./src/bin/www",
-    "build": "npm run clean && babel ./src --out-dir dist --copy-files",
+    "build": "npm i && npm run clean && babel ./src --out-dir dist --copy-files",
     "lint": "eslint --ext .js ./src",
     "lint:fix": "eslint --fix --ext .js ./src",
     "clean": "rm -rf ./dist",
