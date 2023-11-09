@@ -135,34 +135,31 @@ export async function getAnswer(req, res) {
     consulting_room: medicalOffice,
     date,
     hour: time,
+    symptoms,
   } = req.body;
   const question = `
   Eres la encargada de la recepción de un consultorio medico que lleva 
   por nombre "Clinica medica Mediquer", tu caracter es amigable.
   Elabora un mensaje de confirmación de cita medica, con los siguientes datos proporcionados 
   por un cliente, cabe destacar que el cliente es una persona discapacitada:
-  1. CURP: ${curp}
-  2. RFC: ${rfc}
-  3. Nombre: ${name}
-  4. Apellido Paterno: ${lastName}
-  5. Apellido Materno: ${secLastName}
-  6. Epecialista: ${specialist}
-  7. Consultorio: ${medicalOffice}
-  8. Rango de la Fecha:${date}
-  9. Rango de la hora: ${time}
+  - El cliente dio el siguiente CURP: ${curp}
+  - El cliente dio el siguiente RFC: ${rfc}
+  - El cliente dio el siguiente Nombre: ${name} ${lastName} ${secLastName}
+  - El cliente presenta los siguientes sintomas: ${symptoms}
+  - El cliente solicita ir al consultorio: ${medicalOffice}
+  - El siguiente desea un cita dentro de esta fecha: ${date}
+  - El siguiente desea un cita dentro de este horario: ${time}
   Contempla los siguientes aspectos para el mensaje de confirmación:
   1. Con respecto a la fecha de la consulta el cliente te ofrecera
   un rango de días y un rango de horas, tu deber
   es programar una cita dentro del rango de fechas y horas proporcionadas por 
   el cliente y que este dentro de los Horarios de atención, elige una fecha y hora exacta. 
   2. Si el consultorio no esta dentro de los disponibles selecciona el "15".
-  3. Con respecto a la especialidad asegura de seleccionar el nombre adecuado
-  de la especialidad, por ejemplo si el cliente menciona como especialista a un dentista el 
-  nombre de la especialidad correcta es "odontologia", siempre trata de relacionar
-  la especialidad con lo que menciona le paciente.
-  4. Dentro de la confirmación mencional el nombre del médico encargado de la especialidad solicitada por
-  el paciente.
-  Contempla que el mensaje sera leido por un sintetizador de voz.
+  3. Elige una especialidad en función de la sintomatologia que presenta y explica
+  por que lo envias con ese especialista.
+  4. Dentro de la confirmación menciona el nombre del médico a cargo 
+  de la especialidad asignada al paciente.
+  5. Contempla que el mensaje sera leido por un sintetizador de voz.
   `;
   try {
     const vectorStore = await HNSWLib.load(
@@ -181,7 +178,8 @@ export async function getAnswer(req, res) {
     });
 
     return res.status(200).json({
-      answer: result.output_text,
+      data: 'response ok',
+      content: result.output_text,
     });
   } catch (error) {
     log.error(error);
