@@ -3,15 +3,42 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "NODE_ENV=production node ./bin/www",
+    "dev": "NODE_ENV=development babel-watch ./src/bin/www",
+    "build": "npm run clean && babel ./src --out-dir dist --copy-files",
+    "lint": "eslint --ext .js ./src",
+    "lint:fix": "eslint --fix --ext .js ./src",
+    "clean": "rm -rf ./dist",
+    "clean:logs": "rm -rf ./logs/*.log"
   },
   "dependencies": {
+    "app-root-path": "^3.1.0",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "hbs": "^4.2.0",
+    "helmet": "^7.0.0",
     "http-errors": "~1.6.3",
+    "http-status": "^1.7.3",
     "install": "^0.13.0",
-    "morgan": "~1.9.1"
+    "mongoose": "^7.6.3",
+    "morgan": "~1.9.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/eslint-parser": "^7.22.7",
+    "@babel/node": "^7.22.6",
+    "@babel/preset-env": "^7.22.7",
+    "babel-watch": "^7.8.1",
+    "core-js": "^3.31.1",
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0"
   }
 }
