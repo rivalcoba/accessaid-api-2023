@@ -2,8 +2,8 @@
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
-import mongoose from 'mongoose';
-import httpStatus from 'http-status';
+// import mongoose from 'mongoose';
+// import httpStatus from 'http-status';
 
 // Production Only Depenencies
 import express from 'express';
@@ -40,16 +40,16 @@ export default (app) => {
   }
 
   // Checking databse connection middleware
-  app.use((req, res, next) => {
-    if (mongoose.connection.readyState === 1) {
-      logger.info('✅ Pass database 🛢 connection checking');
-      next();
-    } else {
-      res
-        .status(httpStatus.SERVICE_UNAVAILABLE)
-        .json({ message: 'App out of service' });
-    }
-  });
+  // app.use((req, res, next) => {
+  //   if (mongoose.connection.readyState === 1) {
+  //     logger.info('✅ Pass database 🛢 connection checking');
+  //     next();
+  //   } else {
+  //     res
+  //       .status(httpStatus.SERVICE_UNAVAILABLE)
+  //       .json({ message: 'App out of service' });
+  //   }
+  // });
 
   return app;
 };

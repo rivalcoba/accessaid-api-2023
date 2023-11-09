@@ -8,7 +8,7 @@ import http from 'http';
 import app from '../app';
 import constants from '../config/constants';
 import logger from '../config/winston';
-import connectWithRetry from '../database/mongooseConnection';
+// import connectWithRetry from '../database/mongooseConnection';
 
 /**
  * Normalize a port into a number, string, or false.
@@ -80,7 +80,7 @@ function onListening() {
 }
 
 // Launching Database connection attempt
-connectWithRetry(constants.MONGO_URL);
+// connectWithRetry(constants.MONGO_URL);
 
 /**
  * Listen on provided port, on all network interfaces.
