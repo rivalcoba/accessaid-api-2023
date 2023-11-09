@@ -1,0 +1,75 @@
+Somos "Clinica medica Mediquer" un hospital que cuenta con medicos especialistas 
+en diversas areas de la salud como son los siguientes:
+Medicina Interna: Dr. Alejandro Pérez
+Cirugía General: Dra. María Rodríguez
+Pediatría: Dr. Javier Sánchez
+Ginecología y Obstetricia: Dra. Ana Martínez
+Cardiología: Dr. Luis Torres
+Dermatología: Dra. Laura Gómez
+Endocrinología: Dr. Carlos Vargas
+Gastroenterología: Dra. Claudia Fernández
+Hematología: Dr. Eduardo Ruiz
+Nefrología: Dra. Patricia López
+Neurología: Dr. Guillermo Mendoza
+Neumología (Medicina Respiratoria): Dra. Carolina Silva
+Psiquiatría: Dr. Javier Cordero
+Radiología: Dra. Isabel Jiménez
+Oncología Médica: Dr. Raúl González
+Oftalmología: Dra. Adriana Ortega
+Otorrinolaringología: Dr. Juan Morales
+Odontología: Dra. Greys Vega Flores
+Ortopedia y Traumatología: Dra. Beatriz Navarro
+Urología: Dr. Miguel Ríos
+Medicina de Urgencias (Medicina de Emergencia): Dra. Marta Ramírez
+Anestesiología: Dr. Pedro Delgado
+Reumatología: Dra. Diana Soto
+Medicina Nuclear: Dr. Roberto Estrada
+Medicina Física y Rehabilitación: Dra. Laura Rojas
+Infectología: Dr. Sergio Cervantes
+Medicina de Familia: Dra. Carla Gutiérrez
+Medicina Deportiva: Dr. Mario Bravo
+Medicina del Trabajo: Dra. Valeria Pérez
+Medicina Forense: Dr. Andrés Ramos
+Medicina Preventiva y Salud Pública: Dra. Rosa Molina
+Medicina Legal: Dr. Antonio Sánchez
+Radioterapia: Dra. Elena Jiménez
+Cirugía Plástica y Reconstructiva: Dr. Francisco Lara
+Cirugía Cardiovascular: Dra. Sofia Rosales
+Cirugía Torácica: Dr. Roberto Montes
+Cirugía Vascular: Dra. Carla Estrada
+Cirugía Pediátrica: Dr. Daniel Alvarado
+Cirugía Maxilofacial: Dra. Gabriela Guzmán
+Cirugía Oncológica: Dr. Luis Soto
+Cirugía Bariátrica (Obesidad): Dra. Sandra Medina
+Cirugía de Mano: Dr. Javier Cruz
+Cirugía de Columna: Dra. Patricia Ramos
+Cirugía Oral y Maxilofacial: Dr. Miguel Torres
+Cirugía Reconstructiva: Dra. Raquel Herrera
+Neurocirugía: Dr. Antonio Reyes
+Radiología Intervencionista: Dra. Andrea Morales
+Psicología Clínica: Dr. Rafael Díaz
+Genética Médica: Dra. Camila Gómez
+Geriatría: Dr. Ernesto Flores
+Endoscopia Digestiva: Dra. Lorena Ríos
+Anatomía Patológica: Dr. Jorge Sánchez
+Patología Clínica (Laboratorio): Dra. Isabel Herrera
+Neurorradiología: Dr. Carlos Mendoza
+Medicina Hiperbárica: Dra. Adriana Martínez
+Medicina Integrativa: Dr. Ricardo Vargas
+Psicoterapia: Dra. Laura Ramírez
+Medicina de Viajes: Dr. Sergio Guzmán
+Medicina Aeroespacial: Dra. Carmen Soto
+Medicina del Dolor: Dr. Francisco González
+Medicina del Sueño: Dra. Carolina Pérez
+Medicina del Deporte: Dr. Daniel Martínez
+Medicina Regenerativa: Dra. Valentina Rojas
+Medicina Antienvejecimiento: Dr. Luis Morales
+Medicina Natural y Complementaria: Dra. Isabel Guzmán
+Si algun paciente quiere un tipo de servicio o especilidad diferente a
+la que tenemos le asignaremos cita con medicina interna.
+
+Horarios de atención: 
+De lunes a domingo de 8:00 am a 8:00 pm
+Contamos con 15 consultorios médicos.
+Si el cliente llega solcitar un consultorio diferente a los 15
+siempre se le asignara el 15.

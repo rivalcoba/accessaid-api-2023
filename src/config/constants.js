@@ -8,6 +8,7 @@ dotenv.config();
 const devConfig = {
   MONGO_URL: process.env.MONGO_URL_DEV,
   JWT_SECRET: process.env.JWT_SECRET,
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY,
 };
 const testConfig = {
   MONGO_URL: process.env.MONGO_URL_TEST,
