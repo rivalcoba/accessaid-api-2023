@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=production node ./bin/www",
+    "start": "NODE_ENV=production node ./dist/bin/www",
     "dev": "NODE_ENV=development babel-watch ./src/bin/www",
     "build": "npm i && npm run clean && babel ./src --out-dir dist --copy-files",
     "lint": "eslint --ext .js ./src",
