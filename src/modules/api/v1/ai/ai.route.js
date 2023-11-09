@@ -3,7 +3,7 @@ import * as aiController from './ai.controller';
 
 const aiRouter = new Router();
 
-// GET /api/v1/ai
-aiRouter.get('/', aiController.aiRoot);
+// POST /api/v1/ai
+aiRouter.post('/', aiController.aiRoot);
 
 export default aiRouter;

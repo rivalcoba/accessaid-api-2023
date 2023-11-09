@@ -1,6 +1,6 @@
 import httpStatus from 'http-status';
 
-// GET /api/v1/users
+// POST /api/v1/users
 export function aiRoot(req, res) {
   res.status(httpStatus.OK).json({
     result: 'ok',
